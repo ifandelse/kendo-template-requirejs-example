@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Example</title>
+    <meta charset="utf-8"/>
+    <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+</head>
+<body>
+    <!--Weather-->
+    <div id="weather"
+         data-role="view"
+         data-title="Weather"
+         data-model="app.weatherService.viewModel">
+
+        <div class="weather">
+            <p class="weather-title">20-Day Forecast</p>
+
+            <div class="separator">
+                <div class="dark"></div>
+                <div class="light"></div>
+            </div>
+
+            <ul class="forecast-list"
+                data-role="listview"
+                data-bind="source: weatherDataSource"
+                data-template="weather-forecast-template">
+            </ul>
+        </div>
+    </div>
+
+    <!--Weather forecast template-->
+    <script type="text/x-kendo-tmpl" id="weather-forecast-template">
+        <div>
+            <div class="position-left">
+                <span class="weather-info date">${day}</span>
+            </div>
+            <div class="position-right">
+                <span class="weather-info temperature high">${highTemperature}<sup>&deg;</sup></span>
+                <span class="weather-info temperature low">${lowTemperature}<sup>&deg;</sup></span>
+            </div>
+            <div class="position-center">
+                <span class="weather-icon ${image}"></span>
+            </div>
+        </div>
+    </script>
+
+    <!--Layout-->
+    <div data-role="layout" data-id="layout">
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

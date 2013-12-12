@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Example</title>
+    <meta charset="utf-8"/>
+    <link href="js/kendo/styles/kendo.mobile.all.min.css" rel="stylesheet"/>
+    <link href="css/main.css" rel="stylesheet"/>
+</head>
+<body>
+    <!--Weather-->
+    <div id="weather"
+         data-role="view"
+         data-title="Weather"
+         data-model="app.weatherService.viewModel">
+
+        <div class="weather">
+            <p class="weather-title">20-Day Forecast</p>
+
+            <div class="separator">
+                <div class="dark"></div>
+                <div class="light"></div>
+            </div>
+
+            <ul class="forecast-list"
+                data-role="listview"
+                data-bind="source: weatherDataSource"
+                data-template="weather-forecast-template">
+            </ul>
+        </div>
+    </div>
+
+    <!--Layout-->
+    <div data-role="layout" data-id="layout">
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </div>
+    </div>
+    <script src="js/require/require.js" data-main="js/main"></script>
+</body>
+</html>
