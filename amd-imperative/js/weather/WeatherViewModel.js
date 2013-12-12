@@ -1,8 +1,7 @@
 define([
     'kendo',
-    'templateLoader',
     'text!weatherTemplate'
-], function( kendo, templateLoader, weatherTemplate ){
+], function( kendo, weatherTemplate ){
     return kendo.data.ObservableObject.extend({
         weatherDataSource: null,
 

@@ -3,7 +3,6 @@ require.config({
         kendo            : "kendo/js/kendo.mobile.min",
         jquery           : "jquery/jquery.min",
         text             : "require/text",
-        templateLoader   : "infrastructure/kendo-template-loader",
         weatherViewModel : "weather/WeatherViewModel",
         weatherTemplate  : "weather/forecast-template.html"
     },
