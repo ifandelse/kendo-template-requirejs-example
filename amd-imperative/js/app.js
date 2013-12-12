@@ -11,7 +11,7 @@ define([
         },
         init: function() {
             this.kendoApp = new kendo.mobile.Application( document.body, { layout: "layout", statusBarStyle: statusBarStyle });
-            this.weatherService.viewModel = new WeatherViewModel();
+            this.weatherService.viewModel = new WeatherViewModel($("#forecast"));
         }
     };
 });

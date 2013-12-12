@@ -5,10 +5,10 @@ define([
     return kendo.data.ObservableObject.extend({
         weatherDataSource: null,
 
-        init: function () {
+        init: function (listView) {
             var self = this;
 
-            $("#forecast").kendoMobileListView({
+            listView.kendoMobileListView({
                 template : kendo.template(weatherTemplate)
             });
 
